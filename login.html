@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login">
+<h2>Cliente</h2>
+<input id="nome" placeholder="Nome">
+<input id="telefone" placeholder="Telefone">
+<button onclick="login()">Entrar</button>
+</div>
+
+<script>
+function login(){
+    localStorage.setItem("cliente", JSON.stringify({
+        nome: nome.value,
+        telefone: telefone.value
+    }));
+    location.href="index.html";
+}
+</script>
+
+</body>
+</html>

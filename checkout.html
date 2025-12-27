@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="checkout">
+<h2>Finalizar Pedido</h2>
+
+<ul id="resumo"></ul>
+<p>Entrega: R$ 10,00</p>
+<p><strong>Total: R$ <span id="totalCheckout"></span></strong></p>
+
+<h3>Pagamento</h3>
+<p>PIX: seuemail@pix.com</p>
+<a href="https://link.mercadopago.com.br/seulink" target="_blank">Mercado Pago</a>
+
+<button onclick="finalizar()">Confirmar Pedido</button>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

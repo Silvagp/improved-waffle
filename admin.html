@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Pedidos</h2>
+<ul id="pedidos"></ul>
+
+<script>
+const pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+const ul = document.getElementById("pedidos");
+
+pedidos.forEach(p => {
+    ul.innerHTML += `
+    <li>
+    <b>${p.cliente?.nome || "Cliente não identificado"}</b><br>
+    ${p.carrinho.map(i=>`${i.nome}(${i.quantidade}x)`).join(", ")}<br>
+    Total: R$ ${p.total}<br>
+    ${p.data}
+    </li><hr>`;
+});
+</script>
+
+</body>
+</html>
